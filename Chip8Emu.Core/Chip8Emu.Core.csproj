@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB2C106C-13C6-421C-BE08-D4D318F2218C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chip8Emu.Core</RootNamespace>
+    <AssemblyName>Chip8Emu.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PInvoke.Kernel32, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Kernel32.0.5.134\lib\net45\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.5.134\lib\net35\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cpu\Constants.cs" />
+    <Compile Include="Cpu\TimerRegister.cs" />
+    <Compile Include="Display\Backends\Console\ConsoleDisplayDeviceBase.cs" />
+    <Compile Include="Display\Backends\Console\ConsoleDisplayDeviceDoubleBuffered.cs" />
+    <Compile Include="Display\Constants.cs" />
+    <Compile Include="Emulator.cs" />
+    <Compile Include="EmulatorConfig.cs" />
+    <Compile Include="Cpu\Decoders\StackOverflowException.cs" />
+    <Compile Include="Cpu\Decoders\InstructionInterpreter.cs" />
+    <Compile Include="Cpu\Decoders\StackUnderflowException.cs" />
+    <Compile Include="Cpu\IInstructionDecoder.cs" />
+    <Compile Include="Cpu\Instruction.cs" />
+    <Compile Include="Cpu\Cpu.cs" />
+    <Compile Include="Display\Backends\Console\ConsoleDisplayDevice.cs" />
+    <Compile Include="Display\IDisplayDevice.cs" />
+    <Compile Include="Input\IInputDevice.cs" />
+    <Compile Include="Input\Backends\WindowsKeyboard\WindowsKeyboardInputDevice.cs" />
+    <Compile Include="Input\Key.cs" />
+    <Compile Include="Sound\Backends\Windows\WindowsBeepSoundDevice.cs" />
+    <Compile Include="Sound\ISoundDevice.cs" />
+    <Compile Include="Loaders\ProgramLoader.cs" />
+    <Compile Include="Memory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemFont.cs" />
+    <Compile Include="Utilities\BitField.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

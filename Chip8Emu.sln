@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chip8Emu.Core", "Chip8Emu.Core\Chip8Emu.Core.csproj", "{AB2C106C-13C6-421C-BE08-D4D318F2218C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chip8Emu.CLI", "Chip8Emu.CLI\Chip8Emu.CLI.csproj", "{02B112B3-9372-48EA-B57A-829086CEFBEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB2C106C-13C6-421C-BE08-D4D318F2218C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2C106C-13C6-421C-BE08-D4D318F2218C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2C106C-13C6-421C-BE08-D4D318F2218C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2C106C-13C6-421C-BE08-D4D318F2218C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02B112B3-9372-48EA-B57A-829086CEFBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02B112B3-9372-48EA-B57A-829086CEFBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02B112B3-9372-48EA-B57A-829086CEFBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02B112B3-9372-48EA-B57A-829086CEFBEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {438949E4-B32B-431F-929D-4240D0A24BEE}
+	EndGlobalSection
+EndGlobal
